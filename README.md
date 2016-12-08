@@ -2,10 +2,10 @@
 
 ## How to Initialize Everything
 List of things to not forget
+
 1. Run `npm install`
-2. (Optional) Run `gulp` for dev mode
-3. Run `node app.js`
-3a. Open browser to `localhost:7000`  for production (may incur CORS issue) 
+2. Run `node app.js`
+3. Open browser to `localhost:7000`  for production (may incur CORS issue) 
 
 ### Challenge
 
