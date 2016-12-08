@@ -14,6 +14,11 @@ function getFourDigitYear() {
   var d = new Date();
   return d.getFullYear();
 }
+function getPrettyDate(d){
+  var date = new Date(d);
+  var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  return months[date.getMonth()] +" "+ date.getDate() +", " + date.getFullYear();
+}
 function getYesterdayDate() {
   var d = new Date();
   var yesterday = new Date(d);
@@ -42,7 +47,7 @@ $(document).ready(function(){
 function displayImageOfTheDay(){
   document.getElementById("imageOfDay").src = localStorage.imageOfTheDayUrl;
   document.getElementById("imageOfDayName").innerHTML = localStorage.imageOfTheDayCameraName;
-  document.getElementById("imageOfDayDate").innerHTML = "Captured on " + localStorage.imageOfTheDayDate;
+  document.getElementById("imageOfDayDate").innerHTML = "Captured on " + getPrettyDate(localStorage.imageOfTheDayDate);
 }
 
 function shallowCloneObj(obj) {
