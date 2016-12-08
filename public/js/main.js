@@ -20,9 +20,9 @@ function getYesterdayDate() {
   yesterday.setDate(d.getDate() - 1);
   return yesterday.getFullYear()+"-"+(('0' + (yesterday.getMonth()+1)).slice(-2)) + "-" + ('0' + yesterday.getDate()).slice(-2);
 }
+var luckyNum = 0;
 $(document).ready(function(){
-  var luckyNum = 0;
-  if (true || !localStorage.imageOfTheDayUrl && localStorage.imageOfTheDayDate !== getYesterdayDate()){
+  if (!localStorage.imageOfTheDayUrl && localStorage.imageOfTheDayDate !== getYesterdayDate()){
     $.ajax({
       url: "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date="+getYesterdayDate()+"&api_key="+API_KEY,
       success: function(result){
