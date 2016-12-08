@@ -1,3 +1,9 @@
+// should be hidden
+var API_KEY = "aZlmHCp3jD9sanwE8KvytidYArlTvlhwr3fEhYyM";
+var url = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date="+getYesterdayDate()+"&api_key="+API_KEY;
+// Get images
+var listOfImages = [];
+
 // Footer's Year
 setCurrentYearOnFooter();
 function setCurrentYearOnFooter(){
@@ -8,3 +14,26 @@ function getFourDigitYear() {
   var d = new Date();
   return d.getFullYear();
 }
+function getYesterdayDate() {
+  var d = new Date();
+  var yesterday = new Date(d);
+  yesterday.setDate(d.getDate() - 1);
+  return yesterday.getFullYear()+"-"+(('0' + (yesterday.getMonth()+1)).slice(-2)) + "-" + ('0' + yesterday.getDate()).slice(-2);
+}
+$(document).ready(function(){
+  var luckyNum;
+  if (!localStorage.imageOfTheDay && localStorage.viewDate !== getYesterdayDate()){
+    $.ajax({
+      url: "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date="+getYesterdayDate()+"&api_key="+API_KEY,
+      success: function(result){
+        listOfImages = result;
+        luckyNum = Math.round(Math.random() * listOfImages.photos.length+1);
+        localStorage.imageOfTheDay = listOfImages.photos[luckyNum].img_src;
+        document.getElementById("img").src=listOfImages.photos[luckyNum].img_src;
+        localStorage.viewDate = listOfImages.photos[luckyNum].earth_date;
+    }});
+  }else{
+    // no need to refetch, just use what's cached.
+    document.getElementById("img").src= localStorage.imageOfTheDay;
+  }
+});
