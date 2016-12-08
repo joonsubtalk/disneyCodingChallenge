@@ -1,0 +1,84 @@
+html {
+  height: 100%; }
+
+body {
+  min-height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 24px; }
+
+footer {
+  background-color: #e4e4e4;
+  font-size: .5em;
+  text-align: center;
+  padding: .5em 0; }
+
+nav {
+  position: fixed;
+  background: #fff;
+  padding: 1em;
+  width: 100%; }
+
+header {
+  background: url("https://wallpaperscraft.com/image/background_blue_host_vector_minimalism_38910_3840x1200.jpg") no-repeat center center fixed;
+  height: 20em;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  header .headerText {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0px 1px 2px #000; }
+    header .headerText h1 {
+      font-size: 4em;
+      font-weight: bold; }
+    header .headerText span.subtext {
+      letter-spacing: -.05em; }
+
+section.features {
+  margin: 2em 0; }
+  section.features .feature {
+    padding: 1em; }
+    section.features .feature h2 {
+      text-align: center;
+      margin-bottom: 1em; }
+    section.features .feature p {
+      font-size: .75em; }
+
+section.devs {
+  margin: 2em 0; }
+  section.devs .profile {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    section.devs .profile h3 {
+      font-size: 1.2em;
+      margin-bottom: 0; }
+    section.devs .profile p {
+      font-size: .8em; }
+
+.siteContent {
+  -ms-flex: 1;
+  flex: 1; }
+
+/*helpers*/
+.thumbnailed {
+  height: 8em; }
+
+.rounded {
+  border-radius: 50%; }
+
+.right {
+  float: right; }
