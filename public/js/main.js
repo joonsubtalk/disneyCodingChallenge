@@ -14,8 +14,10 @@ function getFourDigitYear() {
   var d = new Date();
   return d.getFullYear();
 }
-function getPrettyDate(d){
+function getPrettyDate(){
+  var d = new Date();
   var date = new Date(d);
+  date.setDate(d.getDate() - 1);
   var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   return months[date.getMonth()] +" "+ date.getDate() +", " + date.getFullYear();
 }
