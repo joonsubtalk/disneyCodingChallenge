@@ -35,6 +35,18 @@ header {
     }
   }
 }
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35em;
+  .imageOfDayContainer{
+    max-width: 50%;
+    .imageOfTheDay{
+      height: 30em;
+    }
+  }
+}
 .siteContent {
   flex: 1;
 }

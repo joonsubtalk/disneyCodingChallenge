@@ -30,6 +30,19 @@ header {
       header ul.nav li a {
         display: inline !important; }
 
+.imageContainer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 35em; }
+  .imageContainer .imageOfDayContainer {
+    max-width: 50%; }
+    .imageContainer .imageOfDayContainer .imageOfTheDay {
+      height: 30em; }
+
 .siteContent {
   -ms-flex: 1;
   flex: 1; }

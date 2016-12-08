@@ -29,11 +29,11 @@ $(document).ready(function(){
         listOfImages = result;
         luckyNum = Math.round(Math.random() * listOfImages.photos.length+1);
         localStorage.imageOfTheDay = listOfImages.photos[luckyNum].img_src;
-        document.getElementById("img").src=listOfImages.photos[luckyNum].img_src;
+        document.getElementById("imageOfDay").src=listOfImages.photos[luckyNum].img_src;
         localStorage.viewDate = listOfImages.photos[luckyNum].earth_date;
     }});
   }else{
     // no need to refetch, just use what's cached.
-    document.getElementById("img").src= localStorage.imageOfTheDay;
+    document.getElementById("imageOfDay").src= localStorage.imageOfTheDay;
   }
 });
