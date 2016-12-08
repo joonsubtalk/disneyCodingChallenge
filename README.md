@@ -34,7 +34,6 @@ Build a web app that displays images taken by NASA's Mars rovers, Opportunity an
 ## How to Initialize Everything
 List of things to not forget
 1. Run `npm install`
-2. Install MongoDB: https://docs.mongodb.com/v3.2/administration/install-community/
-    3. Don't forget to start mongodb service!
-4. Start MongoDB `mongod`
-5. Run `gulp`
+2. (Optional) Run `gulp` for dev mode
+3. Run `node app.js`
+3a. Open browser to `localhost:7000`  for production (may incur CORS issue) 
