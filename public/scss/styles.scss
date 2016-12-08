@@ -41,9 +41,15 @@ header {
   align-items: center;
   height: 35em;
   .imageOfDayContainer{
-    max-width: 50%;
+    overflow: hidden;
+    padding: 2em;
+    border: 1px solid $darkGray;
+    box-shadow: 1px 1px 10px $darkGray;
+    .imageDescription{
+      margin-top:2em;
+    }
     .imageOfTheDay{
-      height: 30em;
+      height: 25em;
     }
   }
 }
@@ -60,4 +66,48 @@ header {
 }
 .right {
   float: right;
+}
+
+
+/* mobile */
+@media screen and (max-width: 768px) {
+  header {
+    padding: .5em;
+    h1 {
+      display:block;
+    }
+    ul.nav {
+      float: inherit;
+      display: block;
+      li{
+        padding: .25em;
+        border: none;
+        display: block;
+        a{
+          white-space:nowrap;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    .imageOfDayContainer{
+      overflow: hidden;
+      padding: 0;
+      border: none;
+      box-shadow: none;
+      .imageDescription{
+        margin: 1em 0;
+      }
+      .imageOfTheDay{
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
 }

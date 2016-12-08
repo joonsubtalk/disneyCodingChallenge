@@ -39,9 +39,14 @@ header {
   align-items: center;
   height: 35em; }
   .imageContainer .imageOfDayContainer {
-    max-width: 50%; }
+    overflow: hidden;
+    padding: 2em;
+    border: 1px solid #c2c2c2;
+    box-shadow: 1px 1px 10px #c2c2c2; }
+    .imageContainer .imageOfDayContainer .imageDescription {
+      margin-top: 2em; }
     .imageContainer .imageOfDayContainer .imageOfTheDay {
-      height: 30em; }
+      height: 25em; }
 
 .siteContent {
   -ms-flex: 1;
@@ -56,3 +61,38 @@ header {
 
 .right {
   float: right; }
+
+/* mobile */
+@media screen and (max-width: 768px) {
+  header {
+    padding: .5em; }
+    header h1 {
+      display: block; }
+    header ul.nav {
+      float: inherit;
+      display: block; }
+      header ul.nav li {
+        padding: .25em;
+        border: none;
+        display: block; }
+        header ul.nav li a {
+          white-space: nowrap;
+          display: block; }
+  .imageContainer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: auto; }
+    .imageContainer .imageOfDayContainer {
+      overflow: hidden;
+      padding: 0;
+      border: none;
+      box-shadow: none; }
+      .imageContainer .imageOfDayContainer .imageDescription {
+        margin: 1em 0; }
+      .imageContainer .imageOfDayContainer .imageOfTheDay {
+        height: auto;
+        width: 100%; } }
