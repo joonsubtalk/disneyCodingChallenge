@@ -1,5 +1,11 @@
 ## Client Engineering Coding Challenge for Front End Job Candidates
 
+## How to Initialize Everything
+List of things to not forget
+1. Run `npm install`
+2. (Optional) Run `gulp` for dev mode
+3. Run `node app.js`
+3a. Open browser to `localhost:7000`  for production (may incur CORS issue) 
 
 ### Challenge
 
@@ -30,10 +36,3 @@ Build a web app that displays images taken by NASA's Mars rovers, Opportunity an
 * As a user, I want the app to be responsive.
 
 * **STRETCH**: As a user, I can specify the earth date for which to display images.
-
-## How to Initialize Everything
-List of things to not forget
-1. Run `npm install`
-2. (Optional) Run `gulp` for dev mode
-3. Run `node app.js`
-3a. Open browser to `localhost:7000`  for production (may incur CORS issue) 
